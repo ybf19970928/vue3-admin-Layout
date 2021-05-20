@@ -1,0 +1,28 @@
+@import './elementUI.scss';
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+    transition: all 0.5s;
+}
+.breadcrumb-enter-from,
+.breadcrumb-leave-active {
+    opacity: 0;
+    transform: translateX(20px);
+}
+.breadcrumb-move {
+    transition: all 0.5s;
+}
+.breadcrumb-leave-active {
+    position: absolute;
+}

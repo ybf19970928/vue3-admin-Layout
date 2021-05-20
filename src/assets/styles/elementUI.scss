@@ -1,0 +1,20 @@
+.el-aside{
+    background-color: #304156;
+    a {
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+      }
+
+  }
+  .el-menu{
+    border-right-width: 0;
+    overflow: hidden !important;
+    .el-menu-item{
+        // background-color: rgb(48, 65, 86) !important;
+    }
+    .el-menu-item.is-active{
+        box-sizing: border-box;
+        background-color: #263445 !important;
+      }
+}
