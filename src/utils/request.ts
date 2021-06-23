@@ -1,6 +1,6 @@
 import axios, { AxiosPromise, AxiosRequestConfig, Method } from 'axios'
 const service = axios.create({
-    // baseURL: 'https://www.fastmock.site/mock/7c5d24e1b5b67c1cf175c20109a91ff0/api',
+    // baseURL: '',
     timeout: 3000
     // headers: {'X-Custom-Header': 'foobar'} 暂定
 })

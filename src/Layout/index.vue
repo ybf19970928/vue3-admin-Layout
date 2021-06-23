@@ -4,10 +4,14 @@
         <div class='main-container'>
             <navbar />
             <tagViews />
-            <div class='app-main'>
+            <div
+                id='app-main-vue'
+                class='app-main'
+            >
                 <router-view />
             </div>
         </div>
+        <div id='app-main-vue2' />
     </div>
 </template>
 

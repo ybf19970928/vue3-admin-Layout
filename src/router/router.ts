@@ -57,7 +57,12 @@ export const routes: Array<RouteRecordRaw> = [
 
 const router = createRouter({
     history: createWebHashHistory(),
-    routes: routes
+    routes: routes,
+    scrollBehavior() {
+        return {
+            top: 0
+        }
+    }
 })
 
 export default router

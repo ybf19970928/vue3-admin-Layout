@@ -5,7 +5,7 @@
             :key='tag.name' 
             :to='{ path: tag.path }'
             class='tag-view-item'
-            :class='[tag.name === tempName?&apos;active&apos;: &apos;&apos;]'
+            :class='[tag.name === tempName ? "active" : null]'
         >
             {{ tag.name }}
             <i
