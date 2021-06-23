@@ -2,9 +2,10 @@ module.exports = {
     productionSourceMap: false,
     devServer: {
         proxy: {
-            '/api': {
-                target: 'http://localhost:9527',
-                changeOrigin: true
+            '/lejuAdmin': {
+                target: 'http://leju.bufan.cloud',
+                changeOrigin: true,
+                pathRewrite: { '^': '' }
             }
         }
     }

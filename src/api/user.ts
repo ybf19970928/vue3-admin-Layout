@@ -1,17 +1,14 @@
-import request, { IrequestKvs } from '@/utils/request'
-import { AxiosPromise } from 'axios'
-export function getUserRouter(config?:IrequestKvs):AxiosPromise<any> {
-    return request({
-        url: '/api/user',
-        method: 'get',
-        kvs: config
-    })
-}
+import request, { responseState } from '@/utils/request'
+import { AxiosResponse } from 'axios'
 
-export function login(config?:IrequestKvs):AxiosPromise<any> {
+export type IUserLogin = {
+    username: string;
+    password: string
+}
+export function login(config: IUserLogin) : Promise<AxiosResponse<responseState>> {
     return request({
-        url: '/api/userLogin',
+        url: '/lejuAdmin/index/login',
         method: 'post',
-        kvs: config
+        data: config
     })
 }

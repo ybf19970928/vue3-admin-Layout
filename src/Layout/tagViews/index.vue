@@ -62,22 +62,21 @@ export default defineComponent({
 <style lang="scss" scoped>
 .tag-view{
     width: 100%;
-    height: 25px;
+    height: 30px;
     padding: 0 20px;
     box-sizing: border-box;
     .tag-view-item{
         display: inline-block;
         height: 100%;
         text-align: center;
-        line-height: 25px;
+        line-height: 30px;
         border: 1px solid #f0f0f0;
         color: #495060;
         background: #fafafa;
         border-bottom: 0;
         box-sizing: border-box;
         padding: 0 10px;
-        font-size: 12px;
-        font-weight: bold;
+        font-size: 14px;
         margin-right: 10px;
         cursor: pointer;
         .del-tagView {

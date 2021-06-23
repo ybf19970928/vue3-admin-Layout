@@ -1,4 +1,11 @@
-import axios, { AxiosPromise, AxiosRequestConfig, Method } from 'axios'
+import axios from 'axios'
+
+export type responseState = {
+    code: number;
+    message: string;
+    success: boolean;
+    data: any
+}
 const service = axios.create({
     // baseURL: '',
     timeout: 3000
@@ -24,29 +31,4 @@ axios.interceptors.response.use(function(response) {
     // Do something with response error
     return Promise.reject(error)
 })
-
-export interface IrequestKvs {
-    [propName: string]: any;
-}
-
-interface Irequest extends AxiosRequestConfig{
-    url: string,
-    method: Method,
-    kvs?:IrequestKvs,
-    // data?:IrequestKvs,
-    // params?: IrequestKvs,
-    // [propName: string]: any
-}
-
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function http(config:Irequest):AxiosPromise<any> {
-    if(config.method.toLocaleLowerCase() === 'post') {
-        config.data = config.kvs
-    }else{
-        config.params = config.kvs
-    }
-    delete config.kvs
-    return service(config)
-}
-
-export default http
+export default service
