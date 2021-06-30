@@ -1,10 +1,29 @@
 <template>
-    用户孩子姓名
+    <div v-if="isShow">
+        <asyncComponent />
+    </div>
+    <button @click="show">显示</button>
 </template>
 <script lang="ts">
 
-import { defineComponent } from 'vue'
+import { defineComponent, defineAsyncComponent, ref } from 'vue'
+const asyncComponent = defineAsyncComponent({
+    loader: () => import('./tempComponent.vue')
+})
 export default defineComponent({
-    name: 'UserChildName'
+    name: 'UserChildName',
+    components: {
+        asyncComponent
+    },
+    setup() {
+        const isShow = ref<boolean>(false)
+        const show = () => {
+            isShow.value = !isShow.value
+        }
+        return {
+            isShow,
+            show
+        }
+    }
 })
 </script>

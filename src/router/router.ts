@@ -42,6 +42,7 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
                 name: 'userInfoName',
                 meta: { icon: 'el-icon-info' },
                 component: () => import('../views/userInfoName.vue'),
+                redirect: {path: '/user/userInfoNameuserChildName'},
                 children: [
                     {
                         path: '/user/userInfoNameuserChildName',

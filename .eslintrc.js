@@ -55,6 +55,6 @@ module.exports = {
         // 路径别名设置
         'no-submodule-imports': ['off', '/@'],
         'no-implicit-dependencies': ['off', ['/@']],
-        '@typescript-eslint/no-explicit-any': 'off' // 类型可以使用any  
+        '@typescript-eslint/no-explicit-any': 'on' // 类型可以使用any  
     }
 }

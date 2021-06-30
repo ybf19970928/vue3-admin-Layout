@@ -12,7 +12,6 @@
                 v-if='!c.children'
                 :key='c.name'
                 :to='{ name: c.name}'
-                class='alink'
             >
                 <el-menu-item :index='c.name'>
                     <i :class='c.meta.icon' />

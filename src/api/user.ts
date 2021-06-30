@@ -5,7 +5,7 @@ export type IUserLogin = {
     username: string;
     password: string
 }
-export function login(config: IUserLogin) : Promise<AxiosResponse<responseState>> {
+export function login(config: IUserLogin): Promise<AxiosResponse<responseState>> {
     return request({
         url: '/lejuAdmin/index/login',
         method: 'post',

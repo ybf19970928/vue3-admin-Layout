@@ -2,7 +2,7 @@ import router, { asyncRoutes } from './router'
 // import { getUserRouter } from '@/api/user'
 // import { filterAsyncRouter } from '@/utils/permission'
 import store from '@/store/index'
-import { RouteRecordRaw } from 'vue-router'
+import { RouteRecordName, RouteRecordRaw } from 'vue-router'
 
 export function createRouterGuards():void {
     router.beforeEach(async(to,from,next) => {
@@ -16,8 +16,8 @@ export function createRouterGuards():void {
                 // test asyncRoutes
                 await store.dispatch('GenerateRoutes', asyncRoutes)
                 asyncRoutes.forEach((route: RouteRecordRaw) => {
-                    const routeName: any = route.name
-                    if (!router.hasRoute(routeName)) {
+                    const routeName: RouteRecordName | undefined = route.name
+                    if (!router.hasRoute(routeName!)) {
                         router.addRoute(route)
                     }
                 })
